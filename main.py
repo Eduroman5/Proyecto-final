@@ -1,12 +1,18 @@
-import requests
-import time
+import api
+
+lista_preguntas = api.obtener_preguntas()
+
+api.bienvenida()
 
 
-def obtener_preguntas(cantidad=15):
-    url = f"https://opentdb.com/api.php?amount={cantidad}&type=multiple"
-    respuesta = requests.get(url)
-    if respuesta.status_code == 200:
-        return respuesta.json().get('results', [])
-    else:
-        print("Error al obtener preguntas. Inténtalo de nuevo más tarde.")
-        return []
+for info_pregunta in lista_preguntas:
+     correcta = info_pregunta['correct_answer']
+     incorrectas = info_pregunta['incorrect_answers']
+     todas = info_pregunta['incorrect_answers']
+     todas.append(correcta)
+     api.mostrar_menu_preguntas(info_pregunta['question'], todas)
+
+
+
+api.introduce_respuesta(['correct_answer'])
+
