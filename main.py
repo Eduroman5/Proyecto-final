@@ -13,6 +13,9 @@ for info_pregunta in lista_preguntas:
     todas.append(correcta)
     api.mostrar_menu_preguntas(info_pregunta['question'], todas)
 
+
+
+
     comodin = input("Quieres usae el comodin")
     if comodin_usado:
         print("Ya has usado el comodin")
@@ -22,6 +25,8 @@ for info_pregunta in lista_preguntas:
         continue
     else:
         print("Sigamos")
+
+
 
 
     respuesta_usuario = input("Introduce la respuesta: ")
