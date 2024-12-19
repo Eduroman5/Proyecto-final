@@ -2,7 +2,7 @@
 import requests
 
 def bienvenida():
-    print(" Bienvenido a '¿Quién quiere ser millonario?'\n")
+    print(" Bienvenido a ¿Quién quiere ser millonario?\n")
     nombre = input("Por favor, ingresa tu nombre: ")
     print(f"\n¡Bienvenido, {nombre}! Comencemos el juego.\n")
 
@@ -25,23 +25,6 @@ def mostrar_menu_preguntas(pregunta, lista_respuesta):
         for respuesta in lista_respuesta:
                 print("\t" + respuesta)
         print("*" * 70)
-
-
-def introduce_respuesta(correcta):
-        puntuacion = 0
-        respuesta_usuario = input("Introduce una respuesta")
-        while respuesta_usuario == True:
-                respuesta_usuario = input("Introduce una respuesta")
-                if respuesta_usuario == correcta:
-                        puntuacion += 1
-                        print(f"¡Correcto! Puntuación actual: {puntuacion}")
-                else:
-                        print(f"Respuesta incorrecta. Has perdido. Puntuación final: {puntuacion}")
-
-                        break
-
-
-
 
 
 
